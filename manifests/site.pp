@@ -4,4 +4,7 @@ node default {
     content => 'This was an update',
     owner   => 'root',
   }  
+  file {'root/README.md':
+    owner   => 'root',
+  }
 }
