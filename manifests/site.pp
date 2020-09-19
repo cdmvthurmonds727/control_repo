@@ -1,6 +1,6 @@
 node default {
 
 }
-node 'localhost.puppet.vm' {
-  include role::localhost.localdomain
+node 'localhost.localdomain' {
+  include role::master_server
 }
