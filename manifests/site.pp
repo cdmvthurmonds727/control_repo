@@ -5,7 +5,7 @@ node default {
       owner   => 'root',
     }  
 }
-node 'localhost.localdomain' {
+node 'localhost' {
   include role::master_server
   file { '/root/README':
     ensure  => file,
