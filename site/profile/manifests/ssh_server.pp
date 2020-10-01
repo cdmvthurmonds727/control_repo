@@ -3,13 +3,13 @@ class profile::ssh_server {
               ensure => present,
       }
       service { 'sshd':
-              ensure =>  'running',
-              enable => 'true'
+              ensure => 'running',
+              enable => 'true',
       }        
       ssh_authorized_key { 'root@master.puppet.vm':     
               ensure => present.
               user   => 'root',
               type   => 'ssh-rsa',
-              key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCYA7bc/h0Kgzs7/T0MMEfhKv7AOthqLwGrcEKOKqVFEX+HZIFvXEdmOyNIkRlndMuZRmZd0qXIYzPhdJeurVKoQWGtSq/YT6ipNtEL9d4nRkDtYufN5bZ+a1R+hWximLc3orMiwIQ2FFydbcNvPZfc65NRjAiz6buwLSjqlRyVBThCRSrk3/o3Cxfbjy/vxrI/YbTNueyY3U3IiSDgJYsY/A1tjkP6PTsmbf3uTAbdi5W4A0GB729gG27+Fd2AarsoxAMYbriFMc62o/rw7hkZJdv9Dx/fVOV/8NwWYQqmG+ubNoe76k1jkh10IPAG9EyoNMdjfTtSwirAzFlhwnJ1',
+              key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCq4vks2GYPoj6kfvX1ZEtlgxygkfetwXyeDTKigewpdDsl42nMra8Q4TFe4O9lNFL0Au1OlZzAYCoz8qbvIobKgshb4Je6c+o1X5uyUn0KJJIzzSjWgpyWiMzRfkVxkSg1UdMySQMGJ7C41o93pD3TCFPdzQNZCpopWPmZ/QVq8kDP99Tc+yj6Figv9KVfJ2c6aM682JvTTu2g6mDHdqfnv6/BO5P/DFHFd0ZHKNgmxTyGycjs9XYcpaMDRJfpJGRRZ+9YMhL1EZ0fsonUo7da8bUK4Lp2yXZ5CAVAvnBl7Q10U5Zltb/rv6iXUXIS2mCblZDh0xHNdxKOCl49Whnf',
 
 }
